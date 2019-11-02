@@ -4,19 +4,21 @@
 <meta charset="UTF-8"/>
 <title> Is your reflex good enought? Let's check! </title>
 
-<script type="text/javascript" src="timer.js">
-
-
-</script>
+<script type="text/javascript" src="timer.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 
-<body onload="clock()">
+<body>
 
-    <div id="target"></div>
+	<div id="container"> 
+	<div id="target"></div>
     <div id="timeCounter"></div>
-	<input id="select" type="submit" value="START" onclick="findNumber()" />
-	<input id="start" type="submit" value="START" onclick="timer()" />
-    <input id="stop" type="submit" value="STOP" onclick="timerBreak()" />
+	<div id="option">
+	<input id="select" type="submit" value="RANDOM" onclick="findNumber()" />
+	<input id="reset" type="submit" value="RESET" onclick="reloadPage()" />
+	</div>
+	</div>
+ 
 
 </body>
 </html>
