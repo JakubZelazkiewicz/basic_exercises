@@ -19,8 +19,14 @@ function timer(){
 		else{
 		    var no1 = document.getElementById("target").textContent;
 			var no2 = document.getElementById("timeCounter").textContent;
-			alert(no1-no2);
+			var different = Math.abs(no1-no2);
+			if (different<20){
+				alert("You are amazing!");
 			}
+			else{
+			alert("You missed by :" + different);
+			}
+}
 }
 	
 	  
