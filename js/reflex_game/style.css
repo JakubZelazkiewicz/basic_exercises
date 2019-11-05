@@ -60,7 +60,7 @@ border-radius: 20px;
 padding:5
 }
 #reset{
-cursor: not-allowed;
+cursor: pointer;
 float:left;
 margin-left:20px;
 width:190px;
