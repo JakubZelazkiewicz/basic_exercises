@@ -2,17 +2,26 @@
 <html>
 <head>
 <meta charset="UTF-8"/>
-<title> Ten zegarek będzie bardzo dokładny</title>
+<title> I hope you like it. </title>
 
-<script type="text/javascript" src="clock.js">
+<script type="text/javascript" src="mosaic.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css"/>
 
 
-</script>
+
 </head>
 
-<body onload="clock()">
+<body>
 
-<div id="goodClock"></div>
+<div id="container">
+<div id="settings">
+<input id="width" type="text"></input>
+<input id="height" type="text"></input>
+<input id="refresh" type="submit" onclick='createMosaic()'></input>
+</div>
+<div id="mosaic">
+</div>
+</div>
 
 </body>
 </html>
