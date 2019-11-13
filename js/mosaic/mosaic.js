@@ -1,8 +1,11 @@
+	var sizeA = 0;
+	var sizeB = 0;
+	var sizeAB = 0;
+
 function createMosaic(){	
-	var sizeA = document.getElementById('width').value;
-	var sizeB = document.getElementById('height').value;
-	var sizeAB = sizeA*sizeB;
-	alert(sizeAB);
+	 sizeA = document.getElementById('width').value;
+	 sizeB = document.getElementById('height').value;
+	 sizeAB = sizeA*sizeB;
 	var mosaicElement = '';
 	
 	for (i=0; i<sizeAB; i++){
@@ -15,17 +18,16 @@ function createMosaic(){
 	start();
 }
 
-function start(){setInterval('turnOnTheLight()', 15)}
+function start(){
+	setInterval('turnOnTheLight()', 30);
+	}
 
 function turnOnTheLight(){
-	var sizeA = document.getElementById('width').value;
-	var sizeB = document.getElementById('height').value;
-	var sizeAB = sizeA*sizeB;
+	 sizeA = document.getElementById('width').value;
+	 sizeB = document.getElementById('height').value;
+	 sizeAB = sizeA*sizeB;
 	var randomSquare = Math.floor(Math.random()*sizeAB);
-	var colorR = Math.floor(Math.random()*255);
-	var colorG = Math.floor(Math.random()*255);
-	var colorB = Math.floor(Math.random()*255);
-	var colorRGB ='rgb(' + colorR +','+ colorG +','+colorB+')';
-	document.getElementById(randomSquare).innerHTML = '<div class="square" id=randomSquare  style="background-color:' + colorRGB + '">'
-}
+	var randomColor = "background-color: #"+(Math.random()*0xFFFFFF<<0).toString(16);
+	document.getElementById(randomSquare).setAttribute('style',  randomColor);
+	}
 		
