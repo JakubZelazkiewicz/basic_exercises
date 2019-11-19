@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="UTF-8"/>
@@ -6,22 +6,24 @@
 
 <script type="text/javascript" src="mosaic.js"></script>
 <link rel="stylesheet" href="style.css" type="text/css"/>
-
-
-
 </head>
 
 <body>
 
 <div id="container">
 <div id="settings">
-<input id="width" type="text"></input>
-<input id="height" type="text"></input>
-<input id="refresh" type="submit" onclick='createMosaic()'></input>
-<input id="stop" type="submit" onclick='timerBreak()'></input>
-<input id="order by color" type="submit" onclick='orderByColor()'></input>
+
+<input id="width" type="text">
+
+<input id="height" type="text">
+
+<input id="refresh" class="button" type="submit" onclick='createMosaic()' value="START" >
+
+<input id="stop" type="submit" class="button" onclick='timerBreak()' value="STOP">
+
+<input id="order by color" type="submit" class="button" onclick='orderByColor()' value="FLIP">
 </div>
-<div id="mosaic">
+<div id="mosaic"> </div>
 </div>
 </div>
 

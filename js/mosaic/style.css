@@ -3,32 +3,30 @@
 	height: 600px;
 	background: black;
 	}
-	
+
 #settings{
-	width: 320px;
-	height: 60px;
-	background: gray;
+	width: 289px;
+	height: 75px;
 	margin: auto;
+	margin-bottom: 50px;
 }
 
-#width{	
+#width{
 	width: 100px;
-	height: 50px;
+	height: 67px;
 	background: orange;
-	float: left;	
+	float: left;
+	text-align: center;
+	font-size: 25px;
 }
 #height{
 	width: 100px;
-	height: 50px;
+	height: 67px;
 	background: green;
 	float: left;
+	text-align: center;
+	font-size: 25px;
 	}
-#refresh{
-	width: 106px;
-	height: 56px;
-	background: yelow;
-	float: left;
-}
 
 #mosaic{
 	clear:both;
@@ -37,6 +35,19 @@
 	margin: auto;
 	background-color: black;
 }
+
+#refresh{
+	float: left;
+}
+#stop{
+		clear: both;
+}
+.button{
+	width: 80px;
+	height: 25px;
+
+}
+
 
 .square{
 	float: left;
