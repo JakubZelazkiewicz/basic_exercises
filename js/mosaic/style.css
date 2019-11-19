@@ -1,0 +1,56 @@
+#container{
+	width: 1000px;
+	height: 600px;
+	background: black;
+	}
+
+#settings{
+	width: 289px;
+	height: 75px;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+#width{
+	width: 100px;
+	height: 67px;
+	background: orange;
+	float: left;
+	text-align: center;
+	font-size: 25px;
+}
+#height{
+	width: 100px;
+	height: 67px;
+	background: green;
+	float: left;
+	text-align: center;
+	font-size: 25px;
+	}
+
+#mosaic{
+	clear:both;
+	width: 400px;
+	height: 400px;
+	margin: auto;
+	background-color: black;
+}
+
+#refresh{
+	float: left;
+}
+#stop{
+		clear: both;
+}
+.button{
+	width: 80px;
+	height: 25px;
+
+}
+
+
+.square{
+	float: left;
+	width: 40px;
+	height: 40px;
+	}
