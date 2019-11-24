@@ -22,10 +22,10 @@ function createMosaic(){
 function start(){
 	changeSpeed = setInterval('turnOnTheLight()', 30);
 	}
-
-function timerBreak() {
-    clearInterval(changeSpeed);
-}
+	
+	function timerBreak() {
+			clearInterval(changeSpeed);
+	}
 
 function turnOnTheLight(){
 	 sizeA = document.getElementById('width').value;
@@ -36,6 +36,8 @@ function turnOnTheLight(){
 
 	document.getElementById(randomSquare).setAttribute('style',  randomColor);
 	}
+
+
 
 function orderByColor(){
 		var colorArr = [];

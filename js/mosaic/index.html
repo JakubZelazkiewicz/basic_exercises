@@ -12,16 +12,11 @@
 
 <div id="container">
 <div id="settings">
-
-<input id="width" type="text">
-
-<input id="height" type="text">
-
-<input id="refresh" class="button" type="submit" onclick='createMosaic()' value="START" >
-
-<input id="stop" type="submit" class="button" onclick='timerBreak()' value="STOP">
-
-<input id="order by color" type="submit" class="button" onclick='orderByColor()' value="FLIP">
+  <input id="width" class="inputValue" type="text">
+  <input id="height" class="inputValue" type="text">
+  <input id="start" type="submit" class="button"  onclick='createMosaic()' value="START" >
+  <input id="stop" type="submit" class="button" onclick='timerBreak()' value="STOP">
+  <input id="order" type="submit" class="button" onclick='orderByColor()' value="FLIP">
 </div>
 <div id="mosaic"> </div>
 </div>
