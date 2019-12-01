@@ -1,0 +1,22 @@
+class Animal {
+    constructor(protected name: string) { }
+    giveVoice() {
+        console.log(`Nazywam się ${this.name}`);
+    }
+}
+
+class Dog extends Animal {
+    constructor(protected name: string) {
+        super(name);
+    }
+    giveVoice() {
+        console.log("szczek szczek");
+        super.giveVoice();
+    }
+    eat() {
+        console.log('mlask mlask');
+    }
+}
+
+const pies = new Dog('Chultaj');
+pies.giveVoice();

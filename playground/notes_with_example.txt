@@ -1,0 +1,120 @@
+Po wywołaniu:
+
+a 		// Uncaught ReferenceError: a is not defined
+
+************************************************************************************************************************************************
+
+let a; 		// undefined
+
+************************************************************************************************************************************************
+
+class Greeter {
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return "Hello, " + this.greeting;
+    }
+}
+
+let greeter: Greeter;								// - deklaracja obiektu greeter typu klasy Greeter
+greeter = new Greeter("world");			// - stworzenie nowej instacji klasy Greeter z przekazywanym argumentem "world"
+console.log(greeter.greet());	
+
+************************************************************************************************************************************************	
+parametr opcjonalny i if w funkcji aby nie dostawać erroru
+
+interface RectangleOptions {
+    width: number;
+    length: number;
+    height?: number;					    // - parametr opcjonalny
+}
+
+
+function drawRectangle(options: RectangleOptions) {
+    let width = options.width;
+    let length = options.length;
+    if (options.height) {							// - zabezpieczenie dla parametru opcjonalnego
+        let height = options.height;
+    }
+}
+
+drawRectangle({
+    width: 200,
+    length: 50,
+})
+
+************************************************************************************************************************************************	
+Sposób na skrócenie deklaracji zmiannych w metodzie do jednego zapisu w konstrutkorze - porównaj konstruktory z Animals1 i Animals2
+
+class Animals1 {
+    rasa: string;
+    imie: string;
+
+    constructor(wartosc1: string, wartosc2: string) {
+        this.imie = wartosc1;
+        this.rasa = wartosc2;
+    }
+ przedstaw(){
+    console.log(`Jestem ${this.imie} i jestem ${this.rasa}`);}}
+
+const dog1 = new Animals1('dalmatynczyk', 'Bebsu');
+dog1.przedstaw()
+
+class Animals2 {
+    constructor(private imie: string, private rasa: string) {}
+ przedstaw(){
+    console.log(`Jestem ${this.imie} i jestem ${this.rasa}`);}}
+
+const dog2 = new Animals2('jamnik', 'Dlugi');
+dog2.przedstaw()
+
+************************************************************************************************************************************************	
+Użucie if w celu sprawdzenia parematru opcjonalnego
+class Animals1 {
+
+    constructor(
+        private imie: string,
+        private rasa: string,
+        private kolor?: string,
+        private wiek?: number,
+    ) { }
+
+    f1() {
+        console.log(`Jestem ${this.imie} i jestem ${this.rasa}`);
+    }
+
+
+    f2() {
+        this.kolor ? this.kolor : this.kolor = "zapomniales";
+        console.log(`Jestem ${this.imie},  rasy ${this.rasa}, a mój kolor to ${this.kolor} i wiek ${this.wiek}`);
+    }
+}
+
+
+const dog2 = new Animals1('jamnik', 'Dlugi');
+dog2.f1()
+dog2.f2()
+
+************************************************************************************************************************************************	
+interfejs + klasa + konstruktor + wywołanie metody
+
+interface Greetable {
+    name: string;
+    age: string;
+
+    letsGreet(phrase1: string, phrase2: string): void;
+}
+
+class Person implements Greetable {
+    constructor(public name: string, public age: string) { }
+
+    letsGreet(phrase1: string, phrase2: string) {
+        console.log(phrase1 + ' ' + this.name +' ' + phrase2 + ' ' + this.age)
+    }
+}
+
+let user1: Greetable;
+user1 = new Person('Kuba', '30');
+user1.letsGreet('hi there - I am', 'and I am')
